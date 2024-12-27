@@ -1,0 +1,32 @@
+home/.bashrc
+-> rm -rf /var/www/html
+-> ln -s /home/$(whoami)/htdocs /var/www/html
+
+->source .bashrc
+
+___________________________
+
+shorttag
+
+php/8.3/apache2/php.ini
+shorttage on
+
+php/8.3/cli/php.ini
+shorttage on
+
+restart apache2
+___________________________
+
+error log apache2
+
+tail -f /var/log/apache2/error.log
+
+___________________________
+
+apache 000.defail.conf (directory travesal attack)
+
+/etc/apache2/sites-enabled/000-default.conf
+
+<Directory "/var/www/html>
+    Options -Indexes
+</Directory>

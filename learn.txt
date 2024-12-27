@@ -1,0 +1,10 @@
+rabbitmq
+redis
+
+php traits
+
+corn jobs
+
+CI/CD 
+
+doker

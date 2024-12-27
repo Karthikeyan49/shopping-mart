@@ -1,0 +1,73 @@
+.navbar{
+    background-color: rgb(65, 65, 65);
+}
+
+.navbar-brand{
+    margin-left: 2%;
+    font-size: 30px;
+    color: white;
+}
+
+.nav-link{
+    font-size: 15px;
+    color: white;
+}
+
+.navbar-nav{
+    padding-left: 80%;
+    margin-right: 2%;
+}
+
+.card {
+    width: 50%;
+    height: 150%;
+}
+
+/* Adjust card size */
+.card {
+    width: 180px; /* Set the card width */
+    height: 220px !important; /* Set the card height */
+    margin: 10px; /* Center cards and control outer margin */
+}
+
+/* Adjust image inside the card */
+.card-img-top {
+    width: 100%; /* Image fills card width */
+    height: 120px; /* Adjust image height */
+    object-fit: cover; /* Maintain image aspect ratio and fill space */
+}
+
+.img-fluid {
+    margin-bottom: 20px;
+    max-width: 100%;
+    height: auto;
+}
+.img-maximize {
+    width: 100%;
+    height: auto;
+}
+
+.nav-link:hover {
+    transform: scale(1.1); /* Increase the size by 10% on hover */
+    transition: transform 0.2s ease; /* Animate the size change smoothly */
+    color: white;
+} 
+
+
+.btn:hover {
+    transform: scale(1.07); /* Increase the size by 10% on hover */
+    transition: transform 0.2s ease; /* Animate the size change smoothly */
+}  
+
+.footer-background{
+    background-color: rgb(65, 65, 65);
+}
+
+h5{
+    color: white;
+}
+
+.text-body-secondary {
+    color: white !important;
+}
+

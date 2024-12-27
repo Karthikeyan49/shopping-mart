@@ -1,0 +1,13 @@
+WWEBAPI
+
+->LOAD SESSION
+->CHECK USER PLATFORM (DO NOT allow CMD AND OTHER.ONLY WEB)
+->SEND OTP
+->OTHER SECURITY
+->oauth
+->htaccess
+->mvc
+->sql injection
+->xss
+->csrf
+
