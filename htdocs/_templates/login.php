@@ -8,14 +8,14 @@ if (session::isset("session_token")) {
 
         <?php
     } else {
-        include '_login_form.php';
+        include 'form/_login_form.php';
     }
 } else {
     if (isset($_POST['pass']) and (isset($_POST['email'])) and isset($_POST['conpass']) and (isset($_POST['username'])) and (isset($_POST['phone']))) {
         if (user::signup($_POST['username'], $_POST['pass'], $_POST['email'], $_POST['phone'])) {
-            include '_login_form.php';
+            include 'form/_login_form.php';
         } else {
-            include '_signup.php';
+            include 'signup.php';
         }
     } else if ((isset($_POST['pass']) and (isset($_POST['email'])))) {
         $us = usersession::authentiaction($_POST['email'], $_POST['pass']);
@@ -26,10 +26,10 @@ if (session::isset("session_token")) {
             </script>
 <?php
         } else {
-            include '_login_form.php';
+            include 'form/_login_form.php';
         }
     } else {
-        include '_login_form.php';
+        include 'form/_login_form.php';
     }
 }
 ?>

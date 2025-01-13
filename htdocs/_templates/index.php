@@ -12,8 +12,6 @@
             $usr = usersession::getUsername($_SESSION['session_token']);
             if ($usr) {
               echo '<label for="name"> Hi, ' . $usr . '</label>';
-              echo '<a class="nav-link" href="product.php
-              ">Login</a>';
             } else {
               session::unset();
               session::destroy();
@@ -33,7 +31,6 @@
           echo '<a class="nav-link" href="signup.php">Sign-up</a>';
         }
         ?>
-        <a method="post" class="nav-link" href="signup.php">Sign-up</a>
       </div>
     </div>
   </div>

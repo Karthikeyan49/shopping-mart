@@ -1,12 +1,15 @@
 <?php
-include "includes/database.class.php";
-include "includes/session.class.php";
-include "includes/user.class.php";
-include "includes/usersession.class.php";
-include "includes/product.class.php";
+foreach (glob("libs/includes/*.php") as $filename) { 
+    include $filename; 
+} 
+foreach (glob("libs/app/*.php") as $filename) { 
+    include $filename; 
+
+} 
+
 
 global $__site_config;
-$__site_config = file_get_contents(filename: $_SERVER['DOCUMENT_ROOT'] . '/../photogramconfig.json');
+$__site_config = file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/../photogramconfig.json');
 
 $array = json_decode($__site_config, true);
 

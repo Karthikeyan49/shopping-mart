@@ -1,7 +1,7 @@
 <?php
 
 class session
-{   
+{
     public static $isError = false;
     public static $user = null;
     public static $usersession = null;
@@ -41,27 +41,31 @@ class session
 
     public static function getUser()
     {
-        return Session::$user;
+        return session::$user;
+    }
+
+    public static function getUserSession()
+    {
+        return session::$usersession;
+    }
+
+    public static function loadTemplate($name)
+    {
+        $script = $_SERVER['DOCUMENT_ROOT'] . "/htdocs/_templates/$name.php";
+        if (is_file($script)) {
+            include $script;
+        } else {
+            session::loadTemplate('_error');
+        }
     }
 
     public static function renderPage()
     {
-        Session::loadTemplate('_master');
+        session::loadTemplate('_master');
     }
 
     public static function currentScript()
     {
         return basename($_SERVER['SCRIPT_NAME'], '.php');
-    }
-
-    public static function loadTemplate($name, $data = [])
-    {
-        extract($data);
-        $script = $_SERVER['DOCUMENT_ROOT'] . "htdocs/_templates/$name.php";
-        if (is_file($script)) {
-            include $script;
-        } else {
-            Session::loadTemplate('_error');
-        }
     }
 }

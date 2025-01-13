@@ -1,0 +1,87 @@
+body {
+    height: 100vh;
+    margin: 0;
+    background-color: #ff9c1c;
+    font-family: Arial, sans-serif;
+}
+
+.navbar{
+    background-color: rgb(65, 65, 65);
+}
+
+.navbar-brand{
+    margin-left: 2%;
+    font-size: 30px;
+    color: white;
+}
+
+.nav-link{
+    font-size: 17px;
+    color: white;
+}
+
+.navbar-nav{
+    padding-left: 85%;
+    margin-right: 2%;
+}
+
+.nav-link:hover {
+    transform: scale(1.2); /* Increase the size by 10% on hover */
+    transition: transform 0.2s ease; /* Animate the size change smoothly */
+    color: white;
+} 
+
+h2{
+    margin-bottom: 2%;
+}
+
+.login-box {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.login-box h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-box label {
+    display: block;
+    margin-bottom: 5px;
+}
+.login-box input[type="text"],
+.login-box input[type="tel"],
+.login-box input[type="email"],
+.login-box input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.login-box button:hover {
+    background-color: #0056b3;
+}
+
+.error-message {
+    color: red;
+    display: none; /* Initially hidden */
+    font-size: 14px;
+    margin-top: 10px;
+}

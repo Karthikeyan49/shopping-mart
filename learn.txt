@@ -8,3 +8,5 @@ corn jobs
 CI/CD 
 
 doker
+
+laravel

@@ -1,3 +1,11 @@
+
+body {
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
 .navbar{
     background-color: rgb(65, 65, 65);
 }
@@ -9,65 +17,185 @@
 }
 
 .nav-link{
-    font-size: 15px;
+    font-size: 17px;
     color: white;
 }
 
 .navbar-nav{
-    padding-left: 80%;
+    padding-left: 85%;
     margin-right: 2%;
 }
 
-.card {
-    width: 50%;
-    height: 150%;
-}
-
-/* Adjust card size */
-.card {
-    width: 180px; /* Set the card width */
-    height: 220px !important; /* Set the card height */
-    margin: 10px; /* Center cards and control outer margin */
-}
-
-/* Adjust image inside the card */
-.card-img-top {
-    width: 100%; /* Image fills card width */
-    height: 120px; /* Adjust image height */
-    object-fit: cover; /* Maintain image aspect ratio and fill space */
-}
-
-.img-fluid {
-    margin-bottom: 20px;
-    max-width: 100%;
-    height: auto;
-}
-.img-maximize {
-    width: 100%;
-    height: auto;
-}
-
 .nav-link:hover {
-    transform: scale(1.1); /* Increase the size by 10% on hover */
+    transform: scale(1.2); /* Increase the size by 10% on hover */
     transition: transform 0.2s ease; /* Animate the size change smoothly */
     color: white;
 } 
+.container {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 2000px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
+h1 {
+    text-align: center;
+}
 
-.btn:hover {
-    transform: scale(1.07); /* Increase the size by 10% on hover */
-    transition: transform 0.2s ease; /* Animate the size change smoothly */
-}  
-
-.footer-background{
+button {
+    margin-bottom: 2px;
+    padding: 10px 20px;
     background-color: rgb(65, 65, 65);
-}
-
-h5{
     color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
 }
 
-.text-body-secondary {
-    color: white !important;
+.sub-btn{
+    text-align: center;
 }
 
+button:hover {
+    background-color: #000;
+}
+
+#productTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#productTable th, #productTable td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.user-cell {
+    position: relative;
+    cursor: pointer;
+}
+
+.user-cell:hover {
+    background-color: #f9f9f9;
+}
+
+.user-cell.active {
+    background-color: #cfe2ff;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.value {
+    width: 30px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.minus, .plus {
+    font-weight: bold;
+    font-size: 24px; /* Increase size */
+    cursor: pointer;
+    color: #007bff;
+    user-select: none;
+}
+
+.minus:hover, .plus:hover {
+    color: #0056b3;
+}
+
+.user-cell:hover {
+    background-color: inherit; /* No color change on hover */
+}
+
+tr:hover td {
+    background-color: #f9f9f9; /* Highlight entire row */
+}
+
+td:hover {
+    background-color: #d0e7ff; /* Highlight specific column */
+}
+
+th.highlight, td.highlight {
+    background-color: #d0e7ff; /* Highlight color for row and column headers */
+}
+
+td:nth-child(2).highlight {
+    background-color: #d0e7ff; /* Highlight for the first cell in the row (product name) */
+}
+
+/* Modal Styles */
+.modal1 { 
+    display: none;
+    position: fixed !important;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content1 {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 47%;
+    height: 20%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left ;
+}
+
+.close1 {
+    color: #aaa;
+    float: right !important;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: -10px;
+}
+
+.close1:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+}
+
+.mem-btn {
+    margin-bottom: 2px;
+    padding: 10px 20px;
+    background-color: rgb(65, 65, 65);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Increase font size for modal content */
+.modal-content1 h3 {
+    font-size: 24px;
+  }
+  
+  .modal-content1 p, .modal-content1 label {
+    font-size: 18px;
+  }
+  
+  /* Increase input field size */
+  .modal-content1 input[type="text"] {
+    width: 40%; /* Adjust width as needed */
+    padding: 10px; /* Increased padding for input */
+    font-size: 16px; /* Increased font size for input */
+  }
